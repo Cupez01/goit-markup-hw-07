@@ -1,0 +1,58 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.regular-customers {
+    height: auto;
+    background-color: $primary--white-color;
+    .regular-customers__h2{
+      @include flex(center, flex, center);
+      margin-bottom: 30px;
+    }
+  }
+
+  .regular-cts ul li {
+  @include flex(center, flex, center);
+    border: solid 1px $gray-2;
+    border-radius: 5px;
+    height: 92px;
+    width: 170px;
+    cursor: pointer;
+    fill: $accent-color;
+  } 
+
+  .iconer {
+    fill: #757575;
+    &:hover{
+      fill: #2196f3;
+    }
+  }
+
+  .regular-customers{
+    .iconer--three {
+    width: 80px;
+    height: 44px;
+  }
+    .iconer--one {
+      width: 44px;
+      height: 44px;
+    }
+    .iconer--two {
+      width: 59px;
+      height: 44px;
+      fill: $gray-1;
+    }
+  }
+  
+  .regular-cts ul {
+    @include flex(center, flex, center);
+    gap: 30px;
+  }
+  .regular-cts ul li:hover {
+    border: solid 1px $accent-color;
+  }
+    ul li .iconer {
+    fill: $gray-1;
+  }
+    ul li:hover .iconer {
+    fill: $accent-color;
+  }

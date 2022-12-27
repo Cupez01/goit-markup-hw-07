@@ -1,0 +1,40 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.benefits__container{
+    
+    ul{
+    @include flex (flex-start, flex, space-between);
+    flex-wrap: wrap;    
+    }
+}
+// ---------------------------------------------
+    .benefits__container .benefits__li{
+        list-style: none;
+        width: $width;
+    
+    .benefits__box{
+        @include flex (center, flex, center);
+        background-color: $primary--white-color-2;
+        border-radius: 15px;
+        height: 120px;
+        margin-bottom: 30px;
+        width: $width;
+        
+    }  
+    .benefits__svg{
+        width: 70px;
+        height: 70px;
+    }
+
+    .benefits__h3{ 
+        @include text(700, 14px,16px); 
+        height: 30px; 
+    }
+
+    .benefits__p{
+        @include text(400, 14px, 24px);
+        color: $gray-2;
+    }
+}
+

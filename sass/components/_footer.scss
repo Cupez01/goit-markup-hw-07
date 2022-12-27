@@ -1,0 +1,117 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+  .footer{
+    width: 100%;
+    background-color: #2F303A;
+    height: 252px;
+    
+    .footer__container{
+      @include flex (baseline, flex, space-between);
+      padding-top: 72px; 
+    }
+  }  
+  .web-size{
+    margin-bottom: 20px;
+  }
+.footer__address{
+  .contact{
+    color: $primary--white-color;
+    @include text (400, 14px, 24px);
+  }
+  .contact-ref{
+  @include text (400, 14px, 24px);
+    letter-spacing: 0.03em;
+    color: $rgba-gray;
+  }
+}  
+  .footer__address .contact:hover,
+  .footer__address .contact-ref:hover{
+    color: $accent-color;
+  }
+  
+  .footer__container .footer-social {
+    p{
+      font-family: 'Roboto';
+      @include flex (700, 14px, 16px);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primary--white-color;
+    }
+    ul {
+      @include flex(center, flex, center);
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    li {
+      @include flex(center, flex, center);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      box-shadow: hsla(0, 0%, 0%, 0.479) 0 3px 5px;
+      cursor: pointer;
+      height: 44px;
+      width: 44px;
+    }
+  }
+
+  
+  .footer-social  ul li .log-social {
+    fill: $primary--white-color;
+  }
+  .footer-social ul li:hover {
+    background-color: $accent-color;
+  }
+  /* ---- */
+  
+  .button__icon--end {
+    margin-left: 15px;
+  }
+  
+  .button__icon {
+    display: inline-flex;
+  }
+  // -------------------------
+  footer .footer-telegram  {
+    .footer__texto{
+      @include text (700, 14px, 16px);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primary--white-color;
+      }
+  }
+  // --------------------------
+  .footer__telegram--suscribe{
+    margin-top: 20px;
+    
+    .footer__input{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    height: 45px;
+    width: 358px;
+    background-color: transparent;
+    @include text (400, 16px, 20px);
+    padding-left: 16px ;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    }
+  
+  .footer__button {
+      width: 200px;
+      height: 50px;
+      @include flex (center, inline-flex, flex-start);
+      padding: 10px 0px 10px 39px;
+      border: none;
+      border-radius: 4px;
+      @include text(700, 16px, 1px);
+      box-shadow: $color-box-shadow;
+      cursor: pointer;
+      color: $primary--white-color-2;
+      background-color: $accent-color;
+    }
+}
+.log-social{
+  width: 20px;
+  height: 20px;
+}

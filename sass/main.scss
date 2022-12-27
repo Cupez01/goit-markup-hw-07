@@ -1,0 +1,48 @@
+@use "./components/header";
+@use "./components/details";
+@use "./components/about";
+@use "./components/customers";
+@use "./components/grid";
+@use "./components/footer";
+@use "./components/team";
+@use "./components/hero";
+@use "./components/modal";
+
+@import "./utils/mixins";
+@import "./utils/variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .body {
+    font-family: "Roboto", sans-serif;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  section{
+  padding: 90px 0;
+  }
+  .no-bottom-pading{
+    padding-bottom: 50px
+  }
+  .no-top-pading {
+    padding-top: 0;  
+  }
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+  }
+.web{
+  color: $accent-color;
+  font-family: "Raleway";
+  @include text(700, 25px, 31px);
+}
+  /* ----------- HERO SECTION ----------- */
+
+  /* VENTANA MODAL */

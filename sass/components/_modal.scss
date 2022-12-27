@@ -1,0 +1,163 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+/* Ventana modal */
+.is-hidden{
+    visibility: hidden;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black-2;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    
+}
+.modal{
+    position: absolute;
+    background: $primary--white-color;
+    width: 528px;
+    height: 581px;
+    margin-left: 536px;
+    margin-right: 536px;
+    margin-top: 150px;
+    padding: 0 40px 0 40px;
+    
+    h3{
+        @include text(700, 20px, 23px);
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $primary-black-color;
+        padding-bottom: 10px;
+    }
+}
+.modal-close {
+    margin: 6px 8px 0 455px;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background: $primary--white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close__svg {
+    width: 10px;
+    height: 10px;
+    fill: $primary-black-color;
+    cursor: pointer;
+    &:hover{
+        fill: $accent-color;
+    }
+}
+.modal__group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.modal__input{
+    display: block;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    padding-left: 40px;
+}
+.modal__svg{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 14px;
+    left: 15px;
+    fill: $primary-black-color;
+}
+.modal__input:focus + .modal__svg, 
+.modal__input:hover + .modal__svg{
+    fill: $accent-color;
+}
+.modal__input-texto{
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.modal__input:focus, .modal__input:hover{
+    border: 1px solid  $accent-color;
+}
+
+.modal__label{
+@include text(400, 12px, 14px);
+letter-spacing: 0.01em;
+color: $gray-2;
+}
+
+textarea#curso{
+width: 100%;
+outline: none;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+padding: 15px;
+@include text(400, 12px, 14px);
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+margin-bottom: 20px;
+    &:hover{
+    border: 1px solid  $accent-color;
+}
+}
+.texto-checkbox{
+    @include text(400, 14px, 24px);
+    letter-spacing: 0.03em;
+    color: $gray-2;
+}
+
+.modal__label--checkamark{
+    display: block;
+    padding-left: 20px;
+}
+.modal__custom-checkmark{
+    top: 4px;
+    left: 0;
+    border-radius: 3px;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #212121;
+}
+.modal__label--checkamark input[type="checkbox"]:checked + .modal__custom-checkmark{
+    background-color: $accent-color;
+    border: none;
+}
+.modal__svg--checkamark{
+    display: none;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    fill: $primary--white-color;
+}
+.modal__custom-text{
+    @include text (400, 14px, 24px);
+    letter-spacing: 0.03em;
+    color: $gray-2;
+    
+}
+.modal__label--checkamark input[type="checkbox"]:checked + .modal__custom-checkmark .modal__svg--checkamark{
+    display: inline;
+}
+
+.modal__button{
+    @include flex(center, flex, center);
+    .modal__button--send{
+        margin-top: 10px;
+        width: 200px;
+        height: 50px;
+        background: $accent-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        color: $primary--white-color;
+        border-style: none;
+        cursor: pointer;
+    }
+}
